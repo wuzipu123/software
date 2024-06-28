@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "Samtec PCIE")(type KiCad)(uri C:/Users/tolotos/Documents/SensMat/Electronic/Tochterplatine_sensirion_SPS30/samtec_pci.pretty)(options "")(descr ""))
+)

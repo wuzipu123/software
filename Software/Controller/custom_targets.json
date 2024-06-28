@@ -1,0 +1,18 @@
+{
+    "BOX_CTRL": {
+        "inherits": [
+            "NUCLEO_L476RG"
+        ],
+        "device_has_add": ["USBDEVICE"]
+    },
+    "BOX_CTRL_V2": {
+        "inherits": [
+            "BOX_CTRL"
+        ]
+    },
+    "BOX_CTRL_V3": {
+        "inherits": [
+            "BOX_CTRL"
+        ]
+    }
+}

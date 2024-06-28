@@ -1,0 +1,5 @@
+Data Measurement of Sensor: SPS30 
+Start Time: 10.12.2019 12:57:46 
+Sensortype: Particle Sensor 
+Timestamp; ; Mass PM1.0 [ug/m^3]; Mass PM2.5 [ug/m^3]; Mass PM4.0 [ug/m^3]; Mass PM10.0 [ug/m^3]; Number PM0.5 [#/cm^3]; Number PM1.0 [#/cm^3]; Number PM2.5 [#/cm^3]; Number PM4.0 [#/cm^3]; Number PM10.0 [#/cm^3]; Typical Particle Size [um];
+10.12.2019; 13:01:42; 1.214428425e+00 ; 1.380141735e+00 ; 1.457780600e+00 ; 1.473308325e+00 ; 8.163707733e+00 ; 9.560359955e+00 ; 9.685939789e+00 ; 9.706796646e+00 ; 9.711642265e+00 ; 5.316250324e-01 ;

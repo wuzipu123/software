@@ -1,0 +1,4 @@
+TOOLCHAIN=GCC_ARM
+TARGET=PART_SENS_V3
+ROOT=.
+MBED_OS_DIR=../Framework/mbed-os

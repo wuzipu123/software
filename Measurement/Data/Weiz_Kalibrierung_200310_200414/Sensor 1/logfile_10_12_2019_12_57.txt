@@ -1,0 +1,8 @@
+Init OK 
+10.12.2019 12:57 : Sensor slot 0, no response 
+10.12.2019 12:57 : Sensor slot 1, no response 
+10.12.2019 12:57 : Sensor slot 2, no response 
+10.12.2019 12:57 : Sensor slot 3, no response 
+10.12.2019 12:57 : Started measurement 
+10.12.2019 12:57 : Software System Reset. 
+ End of this logfile. 

@@ -1,0 +1,48 @@
+diff --git a/.mbedignore b/.mbedignore
+new file mode 100644
+index 0000000000..87db4ced00
+--- /dev/null
++++ b/.mbedignore
+@@ -0,0 +1,29 @@
++features/device_key/*
++features/FEATURE_BOOTLOADER/*
++features/FEATURE_EXPERIMENTAL_API/*
++features/frameworks/greentea-client/*
++features/frameworks/mbed-client-randlib/*
++features/frameworks/unity/*
++features/frameworks/utest/*
++storage/kvstore/*
++connectivity/drivers/ble/*
++connectivity/drivers/cellular/*
++connectivity/drivers/emac/*
++connectivity/drivers/mbedtls/*
++connectivity/drivers/nfc/*
++connectivity/drivers/wifi/*
++connectivity/drivers/802.15.4_RF/*
++drivers/device_key/*
++connectivity/lorawan/lorastack/*
++connectivity/lorawan/source/*
++connectivity/lorawan/system/*
++connectivity/lorawan/tests/*
++connectivity/cellular/*
++connectivity/FEATURE_BLE/*
++connectivity/libraries/mbed-coap/*
++connectivity/libraries/ppp/*
++connectivity/lwipstack/*
++connectivity/mbedtls/*
++connectivity/nanostack/*
++connectivity/netsocket/*
++connectivity/nfc/*
+diff --git a/connectivity/drivers/lora/COMPONENT_SX126X/SX126X_LoRaRadio.cpp b/connectivity/drivers/lora/COMPONENT_SX126X/SX126X_LoRaRadio.cpp
+index 041761c219..b642265548 100644
+--- a/connectivity/drivers/lora/COMPONENT_SX126X/SX126X_LoRaRadio.cpp
++++ b/connectivity/drivers/lora/COMPONENT_SX126X/SX126X_LoRaRadio.cpp
+@@ -108,7 +108,7 @@ SX126X_LoRaRadio::SX126X_LoRaRadio(PinName mosi,
+       _crystal_select(crystal_select, PullDown),
+       _ant_switch(ant_switch, PIN_INPUT, PullUp, 0)
+ #ifdef MBED_CONF_RTOS_PRESENT
+-    , irq_thread(osPriorityRealtime, 1024, NULL, "LR-SX126X")
++    , irq_thread(osPriorityRealtime, 4096, NULL, "LR-SX126X")
+ #endif
+ {
+     _radio_events = NULL;

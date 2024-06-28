@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LAMBDA-9S
+D 915MHz LORA RF Fcc Certified Module 16km
+F https://componentsearchengine.com/Datasheets/1/LAMBDA-9S.pdf
+$ENDCMP
+#
+#End Doc Library

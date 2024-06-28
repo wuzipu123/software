@@ -1,0 +1,240 @@
+EESchema Schematic File Version 4
+LIBS:RF_LoRa-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 7350 3000 2    50   Input ~ 0
+SDI
+Text HLabel 7350 3100 2    50   Output ~ 0
+SDO
+Text HLabel 7350 3200 2    50   Input ~ 0
+SCLK
+Text HLabel 7350 3300 2    50   Input ~ 0
+RESET
+Text HLabel 3450 3200 0    50   Input ~ 0
+RX_SWITCH
+Text HLabel 3450 3300 0    50   Input ~ 0
+TX_SWITCH
+$Comp
+L Lambda_9S:LAMBDA-9S IC1
+U 1 1 5E3B72DB
+P 4650 2900
+F 0 "IC1" H 5350 3165 50  0000 C CNN
+F 1 "LAMBDA-9S" H 5350 3074 50  0000 C CNN
+F 2 "Lambda_9S:LAMBDA9S" H 5900 3000 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/LAMBDA-9S.pdf" H 5900 2900 50  0001 L CNN
+F 4 "915MHz LORA RF Fcc Certified Module 16km" H 5900 2800 50  0001 L CNN "Description"
+F 5 "2" H 5900 2700 50  0001 L CNN "Height"
+F 6 "223-LAMBDA-9S" H 5900 2600 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=223-LAMBDA-9S" H 5900 2500 50  0001 L CNN "Mouser Price/Stock"
+F 8 "RF SOLUTIONS" H 5900 2400 50  0001 L CNN "Manufacturer_Name"
+F 9 "LAMBDA-9S" H 5900 2300 50  0001 L CNN "Manufacturer_Part_Number"
+	1    4650 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 2900 6100 2900
+$Comp
+L power:GND #PWR028
+U 1 1 5E3B74AF
+P 4600 3000
+F 0 "#PWR028" H 4600 2750 50  0001 C CNN
+F 1 "GND" V 4605 2872 50  0000 R CNN
+F 2 "" H 4600 3000 50  0001 C CNN
+F 3 "" H 4600 3000 50  0001 C CNN
+	1    4600 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 3000 4650 3000
+Wire Wire Line
+	4000 3100 4150 3100
+Text GLabel 5700 4550 1    50   Input ~ 0
++3.3V
+$Comp
+L Device:C C19
+U 1 1 5E3B77CA
+P 4150 2850
+F 0 "C19" H 4265 2896 50  0000 L CNN
+F 1 "1µF" H 4265 2805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4188 2700 50  0001 C CNN
+F 3 "~" H 4150 2850 50  0001 C CNN
+	1    4150 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR027
+U 1 1 5E3B7802
+P 4150 2650
+F 0 "#PWR027" H 4150 2400 50  0001 C CNN
+F 1 "GND" H 4155 2477 50  0000 C CNN
+F 2 "" H 4150 2650 50  0001 C CNN
+F 3 "" H 4150 2650 50  0001 C CNN
+	1    4150 2650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4150 2650 4150 2700
+Wire Wire Line
+	4150 3000 4150 3100
+Connection ~ 4150 3100
+Wire Wire Line
+	4150 3100 4650 3100
+Text Notes 4050 3000 1    50   ~ 0
+Place close to \nmodule VCC\n
+Wire Wire Line
+	3450 3200 4000 3200
+Wire Wire Line
+	3450 3300 3700 3300
+$Comp
+L Device:R R18
+U 1 1 5E3BC330
+P 3700 3550
+F 0 "R18" H 3700 3400 50  0000 L CNN
+F 1 "10k" H 3700 3300 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3630 3550 50  0001 C CNN
+F 3 "~" H 3700 3550 50  0001 C CNN
+	1    3700 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R19
+U 1 1 5E3BC36C
+P 4000 3550
+F 0 "R19" H 4000 3400 50  0000 L CNN
+F 1 "10k" H 4000 3300 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3930 3550 50  0001 C CNN
+F 3 "~" H 4000 3550 50  0001 C CNN
+	1    4000 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 3400 3700 3300
+Connection ~ 3700 3300
+Wire Wire Line
+	3700 3300 4650 3300
+Wire Wire Line
+	4000 3400 4000 3200
+Connection ~ 4000 3200
+Wire Wire Line
+	4000 3200 4650 3200
+Wire Wire Line
+	3700 3700 3700 3900
+Wire Wire Line
+	3700 3900 3850 3900
+Wire Wire Line
+	4000 3900 4000 3700
+$Comp
+L power:GND #PWR029
+U 1 1 5E3BD0D6
+P 5800 4550
+F 0 "#PWR029" H 5800 4300 50  0001 C CNN
+F 1 "GND" H 5805 4377 50  0000 C CNN
+F 2 "" H 5800 4550 50  0001 C CNN
+F 3 "" H 5800 4550 50  0001 C CNN
+	1    5800 4550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3850 4000 3850 3900
+Connection ~ 3850 3900
+Wire Wire Line
+	3850 3900 4000 3900
+Wire Wire Line
+	4650 3400 4250 3400
+Wire Wire Line
+	4250 3400 4250 4200
+Wire Wire Line
+	4250 4200 5100 4200
+Wire Wire Line
+	5200 4150 4300 4150
+Wire Wire Line
+	4300 4150 4300 3500
+Wire Wire Line
+	4300 3500 4650 3500
+Wire Wire Line
+	5300 4100 4350 4100
+Wire Wire Line
+	4350 4100 4350 3600
+Wire Wire Line
+	4350 3600 4650 3600
+Wire Wire Line
+	5600 4200 6450 4200
+Wire Wire Line
+	6450 4200 6450 3400
+Wire Wire Line
+	6450 3400 6050 3400
+Wire Wire Line
+	5500 4150 6400 4150
+Wire Wire Line
+	6400 4150 6400 3500
+Wire Wire Line
+	6400 3500 6050 3500
+Wire Wire Line
+	5400 4100 6350 4100
+Wire Wire Line
+	6350 4100 6350 3600
+Wire Wire Line
+	6350 3600 6050 3600
+$Comp
+L Connector_Generic:Conn_01x08 J9
+U 1 1 5E3C2F6D
+P 5500 4800
+F 0 "J9" V 5624 4746 50  0000 C CNN
+F 1 "CONN_IO" V 5715 4746 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B08B-XH-A_1x08_P2.50mm_Vertical" H 5500 4800 50  0001 C CNN
+F 3 "~" H 5500 4800 50  0001 C CNN
+	1    5500 4800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5700 4550 5700 4600
+Wire Wire Line
+	5800 4600 5800 4550
+Wire Wire Line
+	5600 4200 5600 4600
+Wire Wire Line
+	5500 4150 5500 4600
+Wire Wire Line
+	5400 4100 5400 4600
+Wire Wire Line
+	5300 4100 5300 4600
+Wire Wire Line
+	5200 4150 5200 4600
+Wire Wire Line
+	5100 4200 5100 4600
+$Comp
+L power:GND #PWR026
+U 1 1 5E3D3AAB
+P 3850 4000
+F 0 "#PWR026" H 3850 3750 50  0001 C CNN
+F 1 "GND" H 3855 3827 50  0000 C CNN
+F 2 "" H 3850 4000 50  0001 C CNN
+F 3 "" H 3850 4000 50  0001 C CNN
+	1    3850 4000
+	1    0    0    -1  
+$EndComp
+Text GLabel 4000 3100 0    50   Input ~ 0
++3.3V
+Text HLabel 6100 2900 2    50   Input ~ 0
+NSEL
+Wire Wire Line
+	6050 3000 7350 3000
+Wire Wire Line
+	6050 3100 7350 3100
+Wire Wire Line
+	6050 3200 7350 3200
+Wire Wire Line
+	6050 3300 7350 3300
+$EndSCHEMATC

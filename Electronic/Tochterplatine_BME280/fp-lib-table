@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name samtec_pci)(type KiCad)(uri ${KIPRJMOD}/samtec_pci.pretty)(options "")(descr ""))
+  (lib (name Connector_Molex_kk_bearbeitet)(type KiCad)(uri ${KIPRJMOD}/Connector_Molex_kk_bearbeitet.pretty)(options "")(descr ""))
+)

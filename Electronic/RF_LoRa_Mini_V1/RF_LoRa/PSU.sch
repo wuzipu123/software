@@ -1,0 +1,425 @@
+EESchema Schematic File Version 4
+LIBS:RF_LoRa-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR024
+U 1 1 5E395B8B
+P 7750 2250
+F 0 "#PWR024" H 7750 2000 50  0001 C CNN
+F 1 "GND" H 7755 2077 50  0000 C CNN
+F 2 "" H 7750 2250 50  0001 C CNN
+F 3 "" H 7750 2250 50  0001 C CNN
+	1    7750 2250
+	1    0    0    -1  
+$EndComp
+Connection ~ 7150 2150
+$Comp
+L Device:C C15
+U 1 1 5E397616
+P 6250 1600
+F 0 "C15" H 6365 1646 50  0000 L CNN
+F 1 "1µF" H 6365 1555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6288 1450 50  0001 C CNN
+F 3 "~" H 6250 1600 50  0001 C CNN
+	1    6250 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C17
+U 1 1 5E3976BC
+P 7750 1550
+F 0 "C17" H 7865 1596 50  0000 L CNN
+F 1 "2.2µF" H 7865 1505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7788 1400 50  0001 C CNN
+F 3 "~" H 7750 1550 50  0001 C CNN
+	1    7750 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C18
+U 1 1 5E3976EC
+P 7750 3650
+F 0 "C18" H 7865 3696 50  0000 L CNN
+F 1 "2.2µF" H 7865 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7788 3500 50  0001 C CNN
+F 3 "~" H 7750 3650 50  0001 C CNN
+	1    7750 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 3500 7750 3300
+Connection ~ 7750 3300
+Wire Wire Line
+	7750 4200 7750 3800
+Wire Wire Line
+	6250 1450 6250 1250
+Wire Wire Line
+	6250 1750 6250 2150
+Text Notes 6100 1450 3    50   ~ 0
+Put close \nto regulator
+Text Notes 7650 1350 3    50   ~ 0
+Put close \nto regulator\n
+Text Notes 7650 3450 3    50   ~ 0
+Put close \nto regulator
+$Comp
+L Regulator_Linear:AP2204R-5.0 U6
+U 1 1 5E39B376
+P 7150 1250
+F 0 "U6" H 7150 1492 50  0000 C CNN
+F 1 "AP2204R-5.0" H 7150 1401 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 7150 1475 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AP2204.pdf" H 7150 1250 50  0001 C CNN
+	1    7150 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:AP2204R-3.3 U5
+U 1 1 5E39B4BA
+P 6850 3300
+F 0 "U5" H 6850 3542 50  0000 C CNN
+F 1 "AP2204R-3.3" H 6850 3451 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 6850 3525 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AP2204.pdf" H 6850 3300 50  0001 C CNN
+	1    6850 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 1250 6850 1250
+Wire Wire Line
+	6250 2150 7150 2150
+Wire Wire Line
+	6850 4200 7750 4200
+Wire Wire Line
+	6850 3600 6850 4200
+Wire Wire Line
+	7150 1550 7150 2150
+Wire Wire Line
+	7150 2150 7750 2150
+Wire Wire Line
+	7450 1250 7750 1250
+Wire Wire Line
+	7750 1400 7750 1250
+Wire Wire Line
+	7750 1700 7750 2150
+Wire Wire Line
+	6550 3300 6350 3300
+Wire Wire Line
+	5800 3300 5800 1250
+Wire Wire Line
+	5800 1250 6250 1250
+Connection ~ 6250 1250
+$Comp
+L Device:C C16
+U 1 1 5E47DA0E
+P 6350 3750
+F 0 "C16" H 6465 3796 50  0000 L CNN
+F 1 "1µF" H 6465 3705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6388 3600 50  0001 C CNN
+F 3 "~" H 6350 3750 50  0001 C CNN
+	1    6350 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 4200 6350 4200
+Wire Wire Line
+	6350 4200 6350 3900
+Connection ~ 6850 4200
+Wire Wire Line
+	6350 3600 6350 3300
+Connection ~ 6350 3300
+Wire Wire Line
+	6350 3300 5800 3300
+Wire Wire Line
+	7150 3300 7750 3300
+$Comp
+L power:GND #PWR025
+U 1 1 5E47E982
+P 7750 4250
+F 0 "#PWR025" H 7750 4000 50  0001 C CNN
+F 1 "GND" H 7755 4077 50  0000 C CNN
+F 2 "" H 7750 4250 50  0001 C CNN
+F 3 "" H 7750 4250 50  0001 C CNN
+	1    7750 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 4250 7750 4200
+Connection ~ 7750 4200
+Text Notes 6200 3550 3    50   ~ 0
+Put close \nto regulator\n
+$Comp
+L Device:R R11
+U 1 1 5E482CE0
+P 2000 1600
+F 0 "R11" H 2070 1646 50  0000 L CNN
+F 1 "330k" H 2070 1555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1930 1600 50  0001 C CNN
+F 3 "~" H 2000 1600 50  0001 C CNN
+	1    2000 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5E482DDE
+P 2000 2500
+F 0 "R12" H 2070 2546 50  0000 L CNN
+F 1 "180k" H 2070 2455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1930 2500 50  0001 C CNN
+F 3 "~" H 2000 2500 50  0001 C CNN
+	1    2000 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 2650 2000 2800
+Wire Wire Line
+	7750 2250 7750 2150
+Connection ~ 7750 2150
+$Comp
+L power:GND #PWR020
+U 1 1 5E48478A
+P 2000 2800
+F 0 "#PWR020" H 2000 2550 50  0001 C CNN
+F 1 "GND" H 2005 2627 50  0000 C CNN
+F 2 "" H 2000 2800 50  0001 C CNN
+F 3 "" H 2000 2800 50  0001 C CNN
+	1    2000 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 1750 2000 2100
+Text HLabel 2050 2100 2    50   Input ~ 0
+ADC_UBATT
+Wire Wire Line
+	2050 2100 2000 2100
+Connection ~ 2000 2100
+Wire Wire Line
+	2000 2100 2000 2350
+Text HLabel 8200 3300 2    50   Output ~ 0
++3.3V
+Wire Wire Line
+	7750 3300 8200 3300
+Text HLabel 8200 1250 2    50   Output ~ 0
++5V
+Wire Wire Line
+	8200 1250 7750 1250
+Connection ~ 7750 1250
+$Comp
+L Comparator:LMV331 U4
+U 1 1 5E43277E
+P 3600 2750
+F 0 "U4" H 3941 2796 50  0000 L CNN
+F 1 "LMV331" H 3941 2705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 3600 2850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmv331.pdf" H 3600 2950 50  0001 C CNN
+	1    3600 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:BSS83P Q1
+U 1 1 5E4330E1
+P 4100 1350
+F 0 "Q1" V 4443 1350 50  0000 C CNN
+F 1 "BSS83P" V 4352 1350 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4300 1275 50  0001 L CIN
+F 3 "http://www.farnell.com/datasheets/1835997.pdf" H 4100 1350 50  0001 L CNN
+	1    4100 1350
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 5E434B65
+P 3700 1450
+F 0 "R16" H 3770 1496 50  0000 L CNN
+F 1 "33k" H 3770 1405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3630 1450 50  0001 C CNN
+F 3 "~" H 3700 1450 50  0001 C CNN
+	1    3700 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R17
+U 1 1 5E434B9B
+P 4100 2400
+F 0 "R17" H 4170 2446 50  0000 L CNN
+F 1 "33k" H 4170 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4030 2400 50  0001 C CNN
+F 3 "~" H 4100 2400 50  0001 C CNN
+	1    4100 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 1250 3700 1300
+Connection ~ 3700 1250
+Wire Wire Line
+	3700 1250 3900 1250
+Wire Wire Line
+	3700 1600 3700 1700
+Wire Wire Line
+	3700 1700 4100 1700
+Wire Wire Line
+	4100 1700 4100 1550
+Connection ~ 4100 1700
+Wire Wire Line
+	4100 1700 4100 2250
+Wire Wire Line
+	4100 2750 3900 2750
+Wire Wire Line
+	3500 2450 3500 1250
+Connection ~ 3500 1250
+Wire Wire Line
+	3500 1250 3700 1250
+$Comp
+L power:GND #PWR023
+U 1 1 5E43BAEA
+P 3500 3200
+F 0 "#PWR023" H 3500 2950 50  0001 C CNN
+F 1 "GND" H 3505 3027 50  0000 C CNN
+F 2 "" H 3500 3200 50  0001 C CNN
+F 3 "" H 3500 3200 50  0001 C CNN
+	1    3500 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 3200 3500 3050
+Wire Wire Line
+	6250 2150 1850 2150
+Connection ~ 6250 2150
+$Comp
+L Connector_Generic:Conn_01x02 J8
+U 1 1 5E395C87
+P 1550 1350
+F 0 "J8" H 1470 1025 50  0000 C CNN
+F 1 "CONN_VBAT_UB" H 1470 1116 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B02B-XH-A_1x02_P2.50mm_Vertical" H 1550 1350 50  0001 C CNN
+F 3 "~" H 1550 1350 50  0001 C CNN
+	1    1550 1350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1750 1250 2000 1250
+Wire Wire Line
+	2000 1250 2000 1450
+Connection ~ 2000 1250
+Wire Wire Line
+	2000 1250 2700 1250
+Wire Wire Line
+	1850 2150 1850 1350
+Wire Wire Line
+	1850 1350 1750 1350
+Wire Wire Line
+	4300 1250 5800 1250
+Connection ~ 5800 1250
+$Comp
+L Device:R R13
+U 1 1 5E4425F8
+P 2700 1600
+F 0 "R13" H 2770 1646 50  0000 L CNN
+F 1 "330k" H 2770 1555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2630 1600 50  0001 C CNN
+F 3 "~" H 2700 1600 50  0001 C CNN
+	1    2700 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 5E44263C
+P 2700 2500
+F 0 "R14" H 2770 2546 50  0000 L CNN
+F 1 "220k" H 2770 2455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2630 2500 50  0001 C CNN
+F 3 "~" H 2700 2500 50  0001 C CNN
+	1    2700 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5E442686
+P 2700 2800
+F 0 "#PWR021" H 2700 2550 50  0001 C CNN
+F 1 "GND" H 2705 2627 50  0000 C CNN
+F 2 "" H 2700 2800 50  0001 C CNN
+F 3 "" H 2700 2800 50  0001 C CNN
+	1    2700 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 2800 2700 2650
+Wire Wire Line
+	2700 1750 2700 1950
+Wire Wire Line
+	2700 1450 2700 1250
+Connection ~ 2700 1250
+Wire Wire Line
+	2700 1250 3200 1250
+Wire Wire Line
+	3300 2850 2950 2850
+Wire Wire Line
+	2950 2850 2950 1950
+Wire Wire Line
+	2950 1950 2700 1950
+Connection ~ 2700 1950
+Wire Wire Line
+	2700 1950 2700 2350
+$Comp
+L Device:R R15
+U 1 1 5E446ED5
+P 3200 1600
+F 0 "R15" H 3270 1646 50  0000 L CNN
+F 1 "82k" H 3270 1555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3130 1600 50  0001 C CNN
+F 3 "~" H 3200 1600 50  0001 C CNN
+	1    3200 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2650 3200 2650
+Connection ~ 3200 2650
+Wire Wire Line
+	3200 2650 3200 1750
+Wire Wire Line
+	3200 1450 3200 1250
+Connection ~ 3200 1250
+Wire Wire Line
+	3200 1250 3500 1250
+Wire Wire Line
+	3200 2650 3200 3050
+$Comp
+L Reference_Voltage:LM285D-2.5 D1
+U 1 1 5E44E27C
+P 3200 3200
+F 0 "D1" V 3246 3112 50  0000 R CNN
+F 1 "LM285D-2.5" V 3155 3112 50  0000 R CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3200 3000 50  0001 C CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/LM285-D.PDF" H 3200 3200 50  0001 C CIN
+	1    3200 3200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR022
+U 1 1 5E44F56E
+P 3200 3450
+F 0 "#PWR022" H 3200 3200 50  0001 C CNN
+F 1 "GND" H 3205 3277 50  0000 C CNN
+F 2 "" H 3200 3450 50  0001 C CNN
+F 3 "" H 3200 3450 50  0001 C CNN
+	1    3200 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3450 3200 3350
+Wire Wire Line
+	4100 2550 4100 2750
+$EndSCHEMATC

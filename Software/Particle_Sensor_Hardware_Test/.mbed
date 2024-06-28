@@ -1,0 +1,4 @@
+TARGET=PART_SENS_V1
+TARGET_CODE=0765
+ROOT=.
+MBED_OS_DIR=../Framework/mbed-os

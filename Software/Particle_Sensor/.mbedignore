@@ -1,0 +1,4 @@
+lib/sps30-uart/test_projects/*
+lib/sps30-uart/sample-implementations/*
+lib/sps30-uart/sps30_example_usage.c
+lib/bme280/examples/*

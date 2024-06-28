@@ -1,0 +1,13 @@
+{
+    "PART_SENS": {
+        "inherits": [
+            "NUCLEO_L476RG"
+        ],
+        "device_has_add": ["USBDEVICE"]
+    },
+    "PART_SENS_V1": {
+        "inherits": [
+            "PART_SENS"
+        ]
+    }
+}

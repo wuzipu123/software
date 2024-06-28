@@ -1,0 +1,179 @@
+{
+    "macros": [],
+    "config": {
+        "sdcard-spi-frequency": {
+            "help": "The SPI frequency for the SD card",
+            "value": 5000000
+        },
+        "battery-led-1": {
+            "help": "Defines the pin name for the 1st battery LEDs.",
+            "value": "PA_0"
+        },
+        "battery-led-2": {
+            "help": "Defines the pin name for the 2nd battery LEDs.",
+            "value": "PA_1"
+        },
+        "battery-led-3": {
+            "help": "Defines the pin name for the 3rd battery LEDs.",
+            "value": "PC_5"
+        },
+        "spi-clk": {
+            "help": "SPI bus clock pin name",
+            "value": "PA_5"
+        },
+        "spi-miso": {
+            "help": "SPI bus MISO pin name",
+            "value": "PA_6"
+        },
+        "spi-mosi": {
+            "help": "SPI bus MOSI pin name",
+            "value": "PA_7"
+        },
+        "lora-chip-select": {
+            "help": "LoRa module chip select pin name",
+            "value": "PC_4"
+        },
+        "lora-reset": {
+            "help": "LoRa module reset pin name",
+            "value": "PA_4"
+        },
+        "lora-dio1": {
+            "help": "LoRa module DIO1 pin name",
+            "value": "PB_10"
+        },
+        "lora-busy": {
+            "help": "LoRa module busy pin name",
+            "value": "PB_2"
+        },
+        "lora-frequency-select": {
+            "help": "LoRa module frequency select pin name",
+            "value": "NC"
+        },
+        "lora-device-select": {
+            "help": "LoRa module device select pin name",
+            "value": "NC"
+        },
+        "lora-xtal-select": {
+            "help": "LoRa module XTAL select pin name",
+            "value": "NC"
+        },
+        "lora-antenna-switch": {
+            "help": "LoRa module antenna switch pin name",
+            "value": "NC"
+        },
+        "lora-tx-switch": {
+            "help": "LoRa module TX enable switch pin name",
+            "value": "PB_1"
+        },
+        "lora-rx-switch": {
+            "help": "LoRa module RX enable switch pin name",
+            "value": "PB_0"
+        },
+        "status-led-green": {
+            "help": "Status LED green pin name",
+            "value": "PB_5"
+        },
+        "status-led-red": {
+            "help": "Status LED red pin name",
+            "value": "PB_6"
+        },
+        "button-1": {
+            "help": "Button 1 (next to power switch) pin name",
+            "value": "PB_7"
+        },
+        "button-2": {
+            "help": "Button 2 (next to status LED) pin name",
+            "value": "PB_8"
+        },
+        "sps30-tx-scl": {
+            "help": "I2C clock pin name or UART TX pin name of Sensirion SPS30 particle sensor",
+            "value": "PC_0"
+        },
+        "sps30-rx-sda": {
+            "help": "I2C data pin name or UART RX pin name of Sensirion SPS30 particle sensor",
+            "value": "PC_1"
+        },
+        "sps30-supply-enable": {
+            "help": "Pin name for the SPS30 5V supply enable pin",
+            "value": "PD_2"
+        },
+        "battery-level-en": {
+            "help": "Pin name of the enable pin for the battery level voltage divider",
+            "value": "PC_2"
+        },
+        "battery-level": {
+            "help": "Battery level input pin name",
+            "value": "PC_3"
+        },
+        "sd-card-detect": {
+            "help": "SD card detect pin name",
+            "value": "PC_7"
+        },
+        "bme280-chip-select": {
+            "help": "BME280 SPI chip select pin name",
+            "value": "PA_15"
+        }
+    },
+    "target_overrides": {
+        "PART_SENS_V1": {
+            "platform.default-serial-baud-rate": 115200,
+            "platform.stdio-baud-rate": 115200,
+            "platform.stdio-convert-newlines": 1,
+            "platform.stdio-convert-tty-newlines": 1,
+            "platform.error-reboot-max": 5,
+            "target.printf_lib": "std",
+            "target.restrict_size": "0xFF800",
+            "target.components_add": [
+                "SD",
+                "SX126X"
+            ],
+            "rtos.main-thread-stack-size": 16384,
+            "rtos.idle-thread-stack-size-tickless-extra": 512,
+            "drivers.uart-serial-rxbuf-size": 1500,
+            "drivers.uart-serial-txbuf-size": 1024,
+            "sd.SPI_MOSI": "PC_12",
+            "sd.SPI_MISO": "PC_11",
+            "sd.SPI_CLK": "PC_10",
+            "sd.SPI_CS": "PC_8",
+            "SX126X-lora-driver.standby-mode": 0,
+            "SX126X-lora-driver.sleep-mode": 0,
+            "SX126X-lora-driver.regulator-mode": 0,
+            "lora.public-network": 0,
+            "target.clock_source": "USE_PLL_HSE_XTAL",
+            "target.lse_available": true,
+            "target.default-adc-vref": "9.9",
+            "sdcard-spi-frequency": 5000000,
+            "spi-clk":                  "PA_5",
+            "spi-miso":                 "PA_6",
+            "spi-mosi":                 "PA_7",
+            "lora-chip-select":         "PC_4",
+            "lora-reset":               "PA_4",
+            "lora-dio1":                "PB_10",
+            "lora-busy":                "PB_2",
+            "lora-frequency-select":    "PA_0",
+            "lora-device-select":       "PA_1",
+            "lora-xtal-select":         "NC",
+            "lora-antenna-switch":      "PB_1",
+            "lora-tx-switch":           "PB_1",
+            "lora-rx-switch":           "PB_0",
+            "status-led-green":         "PB_5",
+            "status-led-red":           "PB_6",
+            "button-1":                 "PB_7",
+            "button-2":                 "PB_8",
+            "sps30-tx-scl":             "PC_0",
+            "sps30-rx-sda":             "PC_1",
+            "sps30-supply-enable":      "PD_2",
+            "battery-level-en":         "PC_2",
+            "battery-level":            "PC_3",
+            "battery-led-1":            "PA_0",
+            "battery-led-2":            "PA_1",
+            "battery-led-3":            "PC_5",
+            "sd-card-detect":           "PC_7",
+            "bme280-chip-select":       "PA_15"
+        },
+        "PART_SENS_V2": {
+        },
+        "PART_SENS_V3": {
+        }
+    }
+}

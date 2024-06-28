@@ -1,0 +1,15 @@
+../Framework/mbed-os/features/nfc/*
+../Framework/mbed-os/features/netsocket/*
+../Framework/mbed-os/features/nanostack/*
+../Framework/mbed-os/features/mbedtls/*
+../Framework/mbed-os/features/lwipstack/*
+../Framework/mbed-os/features/lorawan/*
+../Framework/mbed-os/features/device_key/*
+../Framework/mbed-os/features/cellular/*
+../Framework/mbed-os/components/wifi/*
+../Framework/mbed-os/components/802.15.4_RF/*
+../Framework/mbed-os/features/storage/kvstore/*
+../Framework/mbed-os/features/storage/nvstore/*
+../Framework/mbed-os/features/frameworks/*
+UNITTESTS/*
+TESTS/*

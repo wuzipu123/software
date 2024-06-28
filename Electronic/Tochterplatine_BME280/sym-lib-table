@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name Tochterplatine_v3-rescue)(type Legacy)(uri ${KIPRJMOD}/Tochterplatine_v3-rescue.lib)(options "")(descr ""))
+  (lib (name Tochterplatine_alphasense-rescue)(type Legacy)(uri ${KIPRJMOD}/Tochterplatine_alphasense-rescue.lib)(options "")(descr ""))
+  (lib (name samtec_pci)(type Legacy)(uri ${KIPRJMOD}/samtec_pci.lib)(options "")(descr ""))
+  (lib (name TI_ESD)(type Legacy)(uri ${KIPRJMOD}/TI_ESD.lib)(options "")(descr ""))
+  (lib (name Tochterplatine_BME280-rescue)(type Legacy)(uri ${KIPRJMOD}/Tochterplatine_BME280-rescue.lib)(options "")(descr ""))
+)

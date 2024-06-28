@@ -1,0 +1,57 @@
+12600539002048
+samtec_pci
+BUS_PCIexpress
+PCIexpress Bus Edge Connector
+PCIexpress Bus Edge Connector
+0
+70
+36
+samtec_pci
+Samtec_MECF-30-01-NP-L-DV_2x30_P1.27mm_Socket_Horizontal
+Highspeed card edge connector for 1.6mm PCB's with 30 contacts (not polarized)
+conn samtec card-edge high-speed
+0
+60
+60
+samtec_pci
+Samtec_MECF-30-02-L-DV-WT_2x30_P1.27mm_Polarized_Socket_Horizontal
+Highspeed card edge connector for 2.4mm PCB's with 30 contacts (polarized)
+conn samtec card-edge high-speed
+0
+60
+58
+samtec_pci
+Samtec_MECF-70-02-NP-L-DV-WT_2x70_P1.27mm_Socket_Horizontal
+Highspeed card edge connector for 2.4mm PCB's with 70 contacts (not polarized)
+conn samtec card-edge high-speed
+0
+142
+140
+samtec_pci
+Samtec_MECF-70-02-NP-L-DV_2x70_P1.27mm_Socket_Horizontal
+Highspeed card edge connector for 2.4mm PCB's with 70 contacts (not polarized)
+conn samtec card-edge high-speed
+0
+140
+140
+samtec_pci
+SAMTEC_PCIE-064-02-F-D-TH
+PCI EXPRESS CARD CONNECTOR ,64 PINS.
+
+0
+64
+64
+samtec_pci
+SAMTEC_PCIE_064-02-F-D-TH-Tochter
+
+
+0
+64
+64
+samtec_pci
+TOBYA05
+
+
+0
+10
+10

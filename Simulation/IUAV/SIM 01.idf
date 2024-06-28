@@ -1,0 +1,990 @@
+!-Generator IDFEditor 1.50
+!-Option SortedOrder
+
+!-NOTE: All comments with '!-' are ignored by the IDFEditor and are generated automatically.
+!-      Use '!' comments if they need to be retained when using the IDFEditor.
+
+
+!-   ===========  ALL OBJECTS IN CLASS: VERSION ===========
+
+Version,
+    9.1.0;                   !- Version Identifier
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SIMULATIONCONTROL ===========
+
+SimulationControl,
+    No,                      !- Do Zone Sizing Calculation
+    No,                      !- Do System Sizing Calculation
+    No,                      !- Do Plant Sizing Calculation
+    Yes,                     !- Run Simulation for Sizing Periods
+    Yes,                     !- Run Simulation for Weather File Run Periods
+    No,                      !- Do HVAC Sizing Simulation for Sizing Periods
+    1;                       !- Maximum Number of HVAC Sizing Simulation Passes
+
+
+!-   ===========  ALL OBJECTS IN CLASS: BUILDING ===========
+
+Building,
+    H2020_SENSMAT_VENICE,    !- Name
+    -110,                    !- North Axis {deg}
+    Suburbs,                 !- Terrain
+    0.04,                    !- Loads Convergence Tolerance Value
+    0.4,                     !- Temperature Convergence Tolerance Value {deltaC}
+    FullExterior,            !- Solar Distribution
+    25,                      !- Maximum Number of Warmup Days
+    6;                       !- Minimum Number of Warmup Days
+
+
+!-   ===========  ALL OBJECTS IN CLASS: TIMESTEP ===========
+
+Timestep,
+    6;                       !- Number of Timesteps per Hour
+
+
+!-   ===========  ALL OBJECTS IN CLASS: CONVERGENCELIMITS ===========
+
+ConvergenceLimits,
+    1,                       !- Minimum System Timestep {minutes}
+    20,                      !- Maximum HVAC Iterations
+    2,                       !- Minimum Plant Iterations
+    8;                       !- Maximum Plant Iterations
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SITE:LOCATION ===========
+
+Site:Location,
+    Venice,                  !- Name
+    45.4,                    !- Latitude {deg}
+    12.33,                   !- Longitude {deg}
+    1,                       !- Time Zone {hr}
+    10;                      !- Elevation {m}
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SIZINGPERIOD:DESIGNDAY ===========
+
+SizingPeriod:DesignDay,
+    SUMMER,                  !- Name
+    7,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    31.1,                    !- Maximum Dry-Bulb Temperature {C}
+    8.8,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    WetBulb,                 !- Humidity Condition Type
+    23.5,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    101205,                  !- Barometric Pressure {Pa}
+    2.8,                     !- Wind Speed {m/s}
+    160,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAEClearSky,          !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    ,                        !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    ,                        !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+    1;                       !- Sky Clearness
+
+SizingPeriod:DesignDay,
+    WINTER,                  !- Name
+    1,                       !- Month
+    21,                      !- Day of Month
+    WinterDesignDay,         !- Day Type
+    -4,                      !- Maximum Dry-Bulb Temperature {C}
+    0,                       !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    WetBulb,                 !- Humidity Condition Type
+    -4,                      !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    101205,                  !- Barometric Pressure {Pa}
+    1.8,                     !- Wind Speed {m/s}
+    50,                      !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAEClearSky,          !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    ,                        !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    ,                        !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+    0;                       !- Sky Clearness
+
+SizingPeriod:DesignDay,
+    MIDSEASON,               !- Name
+    4,                       !- Month
+    21,                      !- Day of Month
+    Monday,                  !- Day Type
+    16.2,                    !- Maximum Dry-Bulb Temperature {C}
+    6.5,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    WetBulb,                 !- Humidity Condition Type
+    8,                       !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    101205,                  !- Barometric Pressure {Pa}
+    2.3,                     !- Wind Speed {m/s}
+    105,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAEClearSky,          !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    ,                        !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    ,                        !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+    0.7;                     !- Sky Clearness
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SCHEDULETYPELIMITS ===========
+
+ScheduleTypeLimits,
+    ANY,                     !- Name
+    -1000000000,             !- Lower Limit Value
+    1000000000,              !- Upper Limit Value
+    Continuous,              !- Numeric Type
+    Dimensionless;           !- Unit Type
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:DAY:INTERVAL ===========
+
+Schedule:Day:Interval,
+    Lights_SummerDesignDay,  !- Name
+    ANY,                     !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    08:00,                   !- Time 1 {hh:mm}
+    0,                       !- Value Until Time 1
+    20:00,                   !- Time 2 {hh:mm}
+    1,                       !- Value Until Time 2
+    24:00,                   !- Time 3 {hh:mm}
+    0;                       !- Value Until Time 3
+
+Schedule:Day:Interval,
+    Lights_WinterDesignDay,  !- Name
+    ANY,                     !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    08:00,                   !- Time 1 {hh:mm}
+    0,                       !- Value Until Time 1
+    20:00,                   !- Time 2 {hh:mm}
+    1,                       !- Value Until Time 2
+    24:00,                   !- Time 3 {hh:mm}
+    0;                       !- Value Until Time 3
+
+Schedule:Day:Interval,
+    Lights_Day,              !- Name
+    ANY,                     !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    08:00,                   !- Time 1 {hh:mm}
+    0,                       !- Value Until Time 1
+    20:00,                   !- Time 2 {hh:mm}
+    1,                       !- Value Until Time 2
+    24:00,                   !- Time 3 {hh:mm}
+    0;                       !- Value Until Time 3
+
+Schedule:Day:Interval,
+    People_SummerDesignDay,  !- Name
+    ANY,                     !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    08:00,                   !- Time 1 {hh:mm}
+    0,                       !- Value Until Time 1
+    20:00,                   !- Time 2 {hh:mm}
+    1,                       !- Value Until Time 2
+    24:00,                   !- Time 3 {hh:mm}
+    0;                       !- Value Until Time 3
+
+Schedule:Day:Interval,
+    People_WinterDesignDay,  !- Name
+    ANY,                     !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    08:00,                   !- Time 1 {hh:mm}
+    0,                       !- Value Until Time 1
+    20:00,                   !- Time 2 {hh:mm}
+    1,                       !- Value Until Time 2
+    24:00,                   !- Time 3 {hh:mm}
+    0;                       !- Value Until Time 3
+
+Schedule:Day:Interval,
+    People_Day,              !- Name
+    ANY,                     !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    08:00,                   !- Time 1 {hh:mm}
+    0,                       !- Value Until Time 1
+    20:00,                   !- Time 2 {hh:mm}
+    1,                       !- Value Until Time 2
+    24:00,                   !- Time 3 {hh:mm}
+    0;                       !- Value Until Time 3
+
+Schedule:Day:Interval,
+    HVAC_SummerDesignDay,    !- Name
+    ANY,                     !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    08:00,                   !- Time 1 {hh:mm}
+    0,                       !- Value Until Time 1
+    20:00,                   !- Time 2 {hh:mm}
+    1,                       !- Value Until Time 2
+    24:00,                   !- Time 3 {hh:mm}
+    0;                       !- Value Until Time 3
+
+Schedule:Day:Interval,
+    HVAC_WinterDesignDay,    !- Name
+    ANY,                     !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    08:00,                   !- Time 1 {hh:mm}
+    0,                       !- Value Until Time 1
+    20:00,                   !- Time 2 {hh:mm}
+    1,                       !- Value Until Time 2
+    24:00,                   !- Time 3 {hh:mm}
+    0;                       !- Value Until Time 3
+
+Schedule:Day:Interval,
+    HVAC_Day,                !- Name
+    ANY,                     !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    08:00,                   !- Time 1 {hh:mm}
+    0,                       !- Value Until Time 1
+    20:00,                   !- Time 2 {hh:mm}
+    1,                       !- Value Until Time 2
+    24:00,                   !- Time 3 {hh:mm}
+    0;                       !- Value Until Time 3
+
+Schedule:Day:Interval,
+    SetP_H_Day,              !- Name
+    ANY,                     !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    08:00,                   !- Time 1 {hh:mm}
+    18,                      !- Value Until Time 1
+    20:00,                   !- Time 2 {hh:mm}
+    21,                      !- Value Until Time 2
+    24:00,                   !- Time 3 {hh:mm}
+    18;                      !- Value Until Time 3
+
+Schedule:Day:Interval,
+    SetP_C_Day,              !- Name
+    ANY,                     !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    08:00,                   !- Time 1 {hh:mm}
+    28,                      !- Value Until Time 1
+    20:00,                   !- Time 2 {hh:mm}
+    26,                      !- Value Until Time 2
+    24:00,                   !- Time 3 {hh:mm}
+    28;                      !- Value Until Time 3
+
+Schedule:Day:Interval,
+    SetP_Dehumid_Day,        !- Name
+    ANY,                     !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    08:00,                   !- Time 1 {hh:mm}
+    55,                      !- Value Until Time 1
+    20:00,                   !- Time 2 {hh:mm}
+    55,                      !- Value Until Time 2
+    24:00,                   !- Time 3 {hh:mm}
+    55;                      !- Value Until Time 3
+
+Schedule:Day:Interval,
+    SetP_Humid_Day,          !- Name
+    ANY,                     !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    08:00,                   !- Time 1 {hh:mm}
+    40,                      !- Value Until Time 1
+    20:00,                   !- Time 2 {hh:mm}
+    40,                      !- Value Until Time 2
+    24:00,                   !- Time 3 {hh:mm}
+    40;                      !- Value Until Time 3
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:WEEK:DAILY ===========
+
+Schedule:Week:Daily,
+    Lights,                  !- Name
+    Lights_Day,              !- Sunday Schedule:Day Name
+    Lights_Day,              !- Monday Schedule:Day Name
+    Lights_Day,              !- Tuesday Schedule:Day Name
+    Lights_Day,              !- Wednesday Schedule:Day Name
+    Lights_Day,              !- Thursday Schedule:Day Name
+    Lights_Day,              !- Friday Schedule:Day Name
+    Lights_Day,              !- Saturday Schedule:Day Name
+    Lights_Day,              !- Holiday Schedule:Day Name
+    Lights_SummerDesignDay,  !- SummerDesignDay Schedule:Day Name
+    Lights_WinterDesignDay,  !- WinterDesignDay Schedule:Day Name
+    Lights_Day,              !- CustomDay1 Schedule:Day Name
+    Lights_Day;              !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+    People,                  !- Name
+    People_Day,              !- Sunday Schedule:Day Name
+    People_Day,              !- Monday Schedule:Day Name
+    People_Day,              !- Tuesday Schedule:Day Name
+    People_Day,              !- Wednesday Schedule:Day Name
+    People_Day,              !- Thursday Schedule:Day Name
+    People_Day,              !- Friday Schedule:Day Name
+    People_Day,              !- Saturday Schedule:Day Name
+    People_Day,              !- Holiday Schedule:Day Name
+    People_SummerDesignDay,  !- SummerDesignDay Schedule:Day Name
+    People_WinterDesignDay,  !- WinterDesignDay Schedule:Day Name
+    People_Day,              !- CustomDay1 Schedule:Day Name
+    People_Day;              !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+    HVAC,                    !- Name
+    HVAC_Day,                !- Sunday Schedule:Day Name
+    HVAC_Day,                !- Monday Schedule:Day Name
+    HVAC_Day,                !- Tuesday Schedule:Day Name
+    HVAC_Day,                !- Wednesday Schedule:Day Name
+    HVAC_Day,                !- Thursday Schedule:Day Name
+    HVAC_Day,                !- Friday Schedule:Day Name
+    HVAC_Day,                !- Saturday Schedule:Day Name
+    HVAC_Day,                !- Holiday Schedule:Day Name
+    HVAC_SummerDesignDay,    !- SummerDesignDay Schedule:Day Name
+    HVAC_WinterDesignDay,    !- WinterDesignDay Schedule:Day Name
+    HVAC_Day,                !- CustomDay1 Schedule:Day Name
+    HVAC_Day;                !- CustomDay2 Schedule:Day Name
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:WEEK:COMPACT ===========
+
+Schedule:Week:Compact,
+    SetP_H,                  !- Name
+    AllDays,                 !- DayType List 1
+    SetP_H_Day;              !- Schedule:Day Name 1
+
+Schedule:Week:Compact,
+    SetP_C,                  !- Name
+    AllDays,                 !- DayType List 1
+    SetP_C_Day;              !- Schedule:Day Name 1
+
+Schedule:Week:Compact,
+    SetP_Dehumid,            !- Name
+    AllDays,                 !- DayType List 1
+    SetP_Dehumid_Day;        !- Schedule:Day Name 1
+
+Schedule:Week:Compact,
+    SetP_Humid,              !- Name
+    AllDays,                 !- DayType List 1
+    SetP_Humid_Day;          !- Schedule:Day Name 1
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:YEAR ===========
+
+Schedule:Year,
+    Lights,                  !- Name
+    ANY,                     !- Schedule Type Limits Name
+    Lights,                  !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+Schedule:Year,
+    People,                  !- Name
+    ANY,                     !- Schedule Type Limits Name
+    People,                  !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+Schedule:Year,
+    HVAC,                    !- Name
+    ANY,                     !- Schedule Type Limits Name
+    HVAC,                    !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+Schedule:Year,
+    SetP_H,                  !- Name
+    ANY,                     !- Schedule Type Limits Name
+    SetP_H,                  !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+Schedule:Year,
+    SetP_C,                  !- Name
+    ANY,                     !- Schedule Type Limits Name
+    SetP_C,                  !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+Schedule:Year,
+    SetP_Dehumid,            !- Name
+    ANY,                     !- Schedule Type Limits Name
+    SetP_Dehumid,            !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+Schedule:Year,
+    SetP_Humid,              !- Name
+    ANY,                     !- Schedule Type Limits Name
+    SetP_Humid,              !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:CONSTANT ===========
+
+Schedule:Constant,
+    ON,                      !- Name
+    ANY,                     !- Schedule Type Limits Name
+    1;                       !- Hourly Value
+
+Schedule:Constant,
+    OFF,                     !- Name
+    ANY,                     !- Schedule Type Limits Name
+    0;                       !- Hourly Value
+
+Schedule:Constant,
+    ActivityLevel,           !- Name
+    ANY,                     !- Schedule Type Limits Name
+    130;                     !- Hourly Value
+
+Schedule:Constant,
+    SetP_Thermostat,         !- Name
+    ANY,                     !- Schedule Type Limits Name
+    4;                       !- Hourly Value
+
+
+!-   ===========  ALL OBJECTS IN CLASS: MATERIAL ===========
+
+Material,
+    Bricks_0.12,             !- Name
+    Rough,                   !- Roughness
+    0.12,                    !- Thickness {m}
+    1.31,                    !- Conductivity {W/m-K}
+    2200,                    !- Density {kg/m3}
+    900,                     !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+Material,
+    Marble_0.05,             !- Name
+    Rough,                   !- Roughness
+    0.05,                    !- Thickness {m}
+    2.5,                     !- Conductivity {W/m-K}
+    2700,                    !- Density {kg/m3}
+    880,                     !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+Material,
+    Wood_0.04,               !- Name
+    Rough,                   !- Roughness
+    0.04,                    !- Thickness {m}
+    0.17,                    !- Conductivity {W/m-K}
+    700,                     !- Density {kg/m3}
+    2000,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+Material,
+    Plaster_0.03,            !- Name
+    Rough,                   !- Roughness
+    0.03,                    !- Thickness {m}
+    0.6,                     !- Conductivity {W/m-K}
+    2200,                    !- Density {kg/m3}
+    900,                     !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+Material,
+    Wood_0.02,               !- Name
+    Rough,                   !- Roughness
+    0.02,                    !- Thickness {m}
+    0.17,                    !- Conductivity {W/m-K}
+    700,                     !- Density {kg/m3}
+    2000,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+
+!-   ===========  ALL OBJECTS IN CLASS: MATERIAL:AIRGAP ===========
+
+Material:AirGap,
+    Air_0.2,                 !- Name
+    0.16;                    !- Thermal Resistance {m2-K/W}
+
+
+!-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
+
+Construction,
+    F,                       !- Name
+    Plaster_0.03,            !- Outside Layer
+    Wood_0.04,               !- Layer 2
+    Wood_0.04,               !- Layer 3
+    Marble_0.05;             !- Layer 4
+
+Construction,
+    C,                       !- Name
+    Marble_0.05,             !- Outside Layer
+    Wood_0.04,               !- Layer 2
+    Wood_0.04,               !- Layer 3
+    Plaster_0.03;            !- Layer 4
+
+Construction,
+    W_Ext,                   !- Name
+    Bricks_0.12,             !- Outside Layer
+    Bricks_0.12,             !- Layer 2
+    Bricks_0.12,             !- Layer 3
+    Plaster_0.03,            !- Layer 4
+    Air_0.2,                 !- Layer 5
+    Wood_0.02;               !- Layer 6
+
+Construction,
+    W_Int,                   !- Name
+    Plaster_0.03,            !- Outside Layer
+    Bricks_0.12,             !- Layer 2
+    Plaster_0.03,            !- Layer 3
+    Air_0.2,                 !- Layer 4
+    Wood_0.02;               !- Layer 5
+
+
+!-   ===========  ALL OBJECTS IN CLASS: GLOBALGEOMETRYRULES ===========
+
+GlobalGeometryRules,
+    UpperLeftCorner,         !- Starting Vertex Position
+    Counterclockwise,        !- Vertex Entry Direction
+    Relative,                !- Coordinate System
+    Relative,                !- Daylighting Reference Point Coordinate System
+    Relative;                !- Rectangular Surface Coordinate System
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ZONE ===========
+
+Zone,
+    Z_01,                    !- Name
+    ,                        !- Direction of Relative North {deg}
+    0,                       !- X Origin {m}
+    0,                       !- Y Origin {m}
+    0,                       !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    autocalculate,           !- Ceiling Height {m}
+    autocalculate,           !- Volume {m3}
+    autocalculate,           !- Floor Area {m2}
+    ,                        !- Zone Inside Convection Algorithm
+    ,                        !- Zone Outside Convection Algorithm
+    Yes;                     !- Part of Total Floor Area
+
+
+!-   ===========  ALL OBJECTS IN CLASS: BUILDINGSURFACE:DETAILED ===========
+
+BuildingSurface:Detailed,
+    Z_01_F,                  !- Name
+    Floor,                   !- Surface Type
+    F,                       !- Construction Name
+    Z_01,                    !- Zone Name
+    Adiabatic,               !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    autocalculate,           !- View Factor to Ground
+    autocalculate,           !- Number of Vertices
+    0,                       !- Vertex 1 X-coordinate {m}
+    0,                       !- Vertex 1 Y-coordinate {m}
+    0,                       !- Vertex 1 Z-coordinate {m}
+    0,                       !- Vertex 2 X-coordinate {m}
+    8,                       !- Vertex 2 Y-coordinate {m}
+    0,                       !- Vertex 2 Z-coordinate {m}
+    9,                       !- Vertex 3 X-coordinate {m}
+    8,                       !- Vertex 3 Y-coordinate {m}
+    0,                       !- Vertex 3 Z-coordinate {m}
+    9,                       !- Vertex 4 X-coordinate {m}
+    0,                       !- Vertex 4 Y-coordinate {m}
+    0;                       !- Vertex 4 Z-coordinate {m}
+
+BuildingSurface:Detailed,
+    Z_01_WE_N,               !- Name
+    Wall,                    !- Surface Type
+    W_Ext,                   !- Construction Name
+    Z_01,                    !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    autocalculate,           !- View Factor to Ground
+    autocalculate,           !- Number of Vertices
+    9,                       !- Vertex 1 X-coordinate {m}
+    8,                       !- Vertex 1 Y-coordinate {m}
+    6,                       !- Vertex 1 Z-coordinate {m}
+    9,                       !- Vertex 2 X-coordinate {m}
+    8,                       !- Vertex 2 Y-coordinate {m}
+    0,                       !- Vertex 2 Z-coordinate {m}
+    0,                       !- Vertex 3 X-coordinate {m}
+    8,                       !- Vertex 3 Y-coordinate {m}
+    0,                       !- Vertex 3 Z-coordinate {m}
+    0,                       !- Vertex 4 X-coordinate {m}
+    8,                       !- Vertex 4 Y-coordinate {m}
+    6;                       !- Vertex 4 Z-coordinate {m}
+
+BuildingSurface:Detailed,
+    Z_01_WI_E,               !- Name
+    Wall,                    !- Surface Type
+    W_Int,                   !- Construction Name
+    Z_01,                    !- Zone Name
+    Adiabatic,               !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    autocalculate,           !- View Factor to Ground
+    autocalculate,           !- Number of Vertices
+    9,                       !- Vertex 1 X-coordinate {m}
+    0,                       !- Vertex 1 Y-coordinate {m}
+    6,                       !- Vertex 1 Z-coordinate {m}
+    9,                       !- Vertex 2 X-coordinate {m}
+    0,                       !- Vertex 2 Y-coordinate {m}
+    0,                       !- Vertex 2 Z-coordinate {m}
+    9,                       !- Vertex 3 X-coordinate {m}
+    8,                       !- Vertex 3 Y-coordinate {m}
+    0,                       !- Vertex 3 Z-coordinate {m}
+    9,                       !- Vertex 4 X-coordinate {m}
+    8,                       !- Vertex 4 Y-coordinate {m}
+    6;                       !- Vertex 4 Z-coordinate {m}
+
+BuildingSurface:Detailed,
+    Z_01_WI_S,               !- Name
+    Wall,                    !- Surface Type
+    W_Int,                   !- Construction Name
+    Z_01,                    !- Zone Name
+    Adiabatic,               !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    autocalculate,           !- View Factor to Ground
+    autocalculate,           !- Number of Vertices
+    0,                       !- Vertex 1 X-coordinate {m}
+    0,                       !- Vertex 1 Y-coordinate {m}
+    6,                       !- Vertex 1 Z-coordinate {m}
+    0,                       !- Vertex 2 X-coordinate {m}
+    0,                       !- Vertex 2 Y-coordinate {m}
+    0,                       !- Vertex 2 Z-coordinate {m}
+    9,                       !- Vertex 3 X-coordinate {m}
+    0,                       !- Vertex 3 Y-coordinate {m}
+    0,                       !- Vertex 3 Z-coordinate {m}
+    9,                       !- Vertex 4 X-coordinate {m}
+    0,                       !- Vertex 4 Y-coordinate {m}
+    6;                       !- Vertex 4 Z-coordinate {m}
+
+BuildingSurface:Detailed,
+    Z_01_WI_W,               !- Name
+    Wall,                    !- Surface Type
+    W_Int,                   !- Construction Name
+    Z_01,                    !- Zone Name
+    Adiabatic,               !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    autocalculate,           !- View Factor to Ground
+    autocalculate,           !- Number of Vertices
+    0,                       !- Vertex 1 X-coordinate {m}
+    8,                       !- Vertex 1 Y-coordinate {m}
+    6,                       !- Vertex 1 Z-coordinate {m}
+    0,                       !- Vertex 2 X-coordinate {m}
+    8,                       !- Vertex 2 Y-coordinate {m}
+    0,                       !- Vertex 2 Z-coordinate {m}
+    0,                       !- Vertex 3 X-coordinate {m}
+    0,                       !- Vertex 3 Y-coordinate {m}
+    0,                       !- Vertex 3 Z-coordinate {m}
+    0,                       !- Vertex 4 X-coordinate {m}
+    0,                       !- Vertex 4 Y-coordinate {m}
+    6;                       !- Vertex 4 Z-coordinate {m}
+
+BuildingSurface:Detailed,
+    Z_01_C,                  !- Name
+    Ceiling,                 !- Surface Type
+    C,                       !- Construction Name
+    Z_01,                    !- Zone Name
+    Adiabatic,               !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    autocalculate,           !- View Factor to Ground
+    autocalculate,           !- Number of Vertices
+    0,                       !- Vertex 1 X-coordinate {m}
+    0,                       !- Vertex 1 Y-coordinate {m}
+    6,                       !- Vertex 1 Z-coordinate {m}
+    9,                       !- Vertex 2 X-coordinate {m}
+    0,                       !- Vertex 2 Y-coordinate {m}
+    6,                       !- Vertex 2 Z-coordinate {m}
+    9,                       !- Vertex 3 X-coordinate {m}
+    8,                       !- Vertex 3 Y-coordinate {m}
+    6,                       !- Vertex 3 Z-coordinate {m}
+    0,                       !- Vertex 4 X-coordinate {m}
+    8,                       !- Vertex 4 Y-coordinate {m}
+    6;                       !- Vertex 4 Z-coordinate {m}
+
+
+!-   ===========  ALL OBJECTS IN CLASS: PEOPLE ===========
+
+People,
+    Z_01,                    !- Name
+    Z_01,                    !- Zone or ZoneList Name
+    People,                  !- Number of People Schedule Name
+    People,                  !- Number of People Calculation Method
+    5,                       !- Number of People
+    ,                        !- People per Zone Floor Area {person/m2}
+    ,                        !- Zone Floor Area per Person {m2/person}
+    0.3,                     !- Fraction Radiant
+    autocalculate,           !- Sensible Heat Fraction
+    ActivityLevel,           !- Activity Level Schedule Name
+    0.0000000382,            !- Carbon Dioxide Generation Rate {m3/s-W}
+    No,                      !- Enable ASHRAE 55 Comfort Warnings
+    ZoneAveraged,            !- Mean Radiant Temperature Calculation Type
+    ,                        !- Surface Name/Angle Factor List Name
+    ,                        !- Work Efficiency Schedule Name
+    ClothingInsulationSchedule;  !- Clothing Insulation Calculation Method
+
+
+!-   ===========  ALL OBJECTS IN CLASS: LIGHTS ===========
+
+Lights,
+    Z_01,                    !- Name
+    Z_01,                    !- Zone or ZoneList Name
+    Lights,                  !- Schedule Name
+    Watts/Area,              !- Design Level Calculation Method
+    ,                        !- Lighting Level {W}
+    10,                      !- Watts per Zone Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0,                       !- Return Air Fraction
+    0.2,                     !- Fraction Radiant
+    0.1,                     !- Fraction Visible
+    1,                       !- Fraction Replaceable
+    General,                 !- End-Use Subcategory
+    No;                      !- Return Air Fraction Calculated from Plenum Temperature
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ZONEINFILTRATION:DESIGNFLOWRATE ===========
+
+ZoneInfiltration:DesignFlowRate,
+    Z_01,                    !- Name
+    Z_01,                    !- Zone or ZoneList Name
+    ON,                      !- Schedule Name
+    AirChanges/Hour,         !- Design Flow Rate Calculation Method
+    ,                        !- Design Flow Rate {m3/s}
+    ,                        !- Flow per Zone Floor Area {m3/s-m2}
+    ,                        !- Flow per Exterior Surface Area {m3/s-m2}
+    0.4,                     !- Air Changes per Hour {1/hr}
+    1,                       !- Constant Term Coefficient
+    ,                        !- Temperature Term Coefficient
+    ,                        !- Velocity Term Coefficient
+    ;                        !- Velocity Squared Term Coefficient
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ZONECONTROL:HUMIDISTAT ===========
+
+ZoneControl:Humidistat,
+    Z_01,                    !- Name
+    Z_01,                    !- Zone Name
+    SetP_Humid,              !- Humidifying Relative Humidity Setpoint Schedule Name
+    SetP_Dehumid;            !- Dehumidifying Relative Humidity Setpoint Schedule Name
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ZONECONTROL:THERMOSTAT ===========
+
+ZoneControl:Thermostat,
+    Z_01,                    !- Name
+    Z_01,                    !- Zone or ZoneList Name
+    SetP_Thermostat,         !- Control Type Schedule Name
+    ThermostatSetpoint:DualSetpoint,  !- Control 1 Object Type
+    Z_01;                    !- Control 1 Name
+
+
+!-   ===========  ALL OBJECTS IN CLASS: THERMOSTATSETPOINT:DUALSETPOINT ===========
+
+ThermostatSetpoint:DualSetpoint,
+    Z_01,                    !- Name
+    SetP_H,                  !- Heating Setpoint Temperature Schedule Name
+    SetP_C;                  !- Cooling Setpoint Temperature Schedule Name
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ZONEHVAC:IDEALLOADSAIRSYSTEM ===========
+
+ZoneHVAC:IdealLoadsAirSystem,
+    Z_01,                    !- Name
+    ON,                      !- Availability Schedule Name
+    Z_01_ILAS_AON,           !- Zone Supply Air Node Name
+    ,                        !- Zone Exhaust Air Node Name
+    ,                        !- System Inlet Air Node Name
+    50,                      !- Maximum Heating Supply Air Temperature {C}
+    13,                      !- Minimum Cooling Supply Air Temperature {C}
+    0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+    NoLimit,                 !- Heating Limit
+    ,                        !- Maximum Heating Air Flow Rate {m3/s}
+    ,                        !- Maximum Sensible Heating Capacity {W}
+    NoLimit,                 !- Cooling Limit
+    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+    ,                        !- Maximum Total Cooling Capacity {W}
+    ON,                      !- Heating Availability Schedule Name
+    ON,                      !- Cooling Availability Schedule Name
+    ConstantSensibleHeatRatio,  !- Dehumidification Control Type
+    0.7,                     !- Cooling Sensible Heat Ratio {dimensionless}
+    None,                    !- Humidification Control Type
+    ,                        !- Design Specification Outdoor Air Object Name
+    ,                        !- Outdoor Air Inlet Node Name
+    None,                    !- Demand Controlled Ventilation Type
+    NoEconomizer,            !- Outdoor Air Economizer Type
+    None,                    !- Heat Recovery Type
+    0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
+    0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ZONEHVAC:EQUIPMENTLIST ===========
+
+ZoneHVAC:EquipmentList,
+    Z_01,                    !- Name
+    SequentialLoad,          !- Load Distribution Scheme
+    ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
+    Z_01,                    !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
+    1,                       !- Zone Equipment 1 Sequential Cooling Fraction
+    1;                       !- Zone Equipment 1 Sequential Heating Fraction
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ZONEHVAC:EQUIPMENTCONNECTIONS ===========
+
+ZoneHVAC:EquipmentConnections,
+    Z_01,                    !- Zone Name
+    Z_01,                    !- Zone Conditioning Equipment List Name
+    Z_01_AINL,               !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Z_01_AN,                 !- Zone Air Node Name
+    Z_01_RANL;               !- Zone Return Air Node or NodeList Name
+
+
+!-   ===========  ALL OBJECTS IN CLASS: NODELIST ===========
+
+NodeList,
+    Z_01_AINL,               !- Name
+    Z_01_ILAS_AON;           !- Node 1 Name
+
+NodeList,
+    Z_01_RANL,               !- Name
+    Z_01_ILAS_AIN;           !- Node 1 Name
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:VARIABLEDICTIONARY ===========
+
+Output:VariableDictionary,
+    IDF,                     !- Key Field
+    Name;                    !- Sort Option
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:SURFACES:LIST ===========
+
+Output:Surfaces:List,
+    Details,                 !- Report Type
+    IDF;                     !- Report Specifications
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:SURFACES:DRAWING ===========
+
+Output:Surfaces:Drawing,
+    DXF,                     !- Report Type
+    Triangulate3DFace;       !- Report Specifications 1
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:CONSTRUCTIONS ===========
+
+Output:Constructions,
+    Constructions,           !- Details Type 1
+    Materials;               !- Details Type 2
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:VARIABLE ===========
+
+Output:Variable,
+    *,                       !- Key Value
+    Zone Mean Air Temperature,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Surface Inside Face Temperature,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Surface Outside Face Temperature,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Surface Inside Face Conduction Heat Transfer Rate per Area,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Surface Inside Face Convection Heat Transfer Coefficient,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Zone Outdoor Air Drybulb Temperature,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Zone Ideal Loads Heat Recovery Total Cooling Rate,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Zone Ideal Loads Heat Recovery Total Heating Rate,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Zone Outdoor Air Wetbulb Temperature,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Zone Mean Radiant Temperature,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:SQLITE ===========
+
+Output:SQLite,
+    SimpleAndTabular;        !- Option Type
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:DIAGNOSTICS ===========
+
+Output:Diagnostics,
+    DisplayAllWarnings,      !- Key 1
+    DisplayAdvancedReportVariables;  !- Key 2
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:DEBUGGINGDATA ===========
+
+Output:DebuggingData,
+    0,                       !- Report Debugging Data
+    0;                       !- Report During Warmup
+

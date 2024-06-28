@@ -1,0 +1,10 @@
+[submodule "Software/Framework/mbed-os"]
+	path = Software/Framework/mbed-os
+	url = https://github.com/ARMmbed/mbed-os.git
+	ignore = dirty
+[submodule "Software/Framework/sd-driver"]
+	path = Software/Framework/sd-driver
+	url = https://github.com/ARMmbed/sd-driver.git
+[submodule "Software/Framework/JSON"]
+	path = Software/Framework/JSON
+	url = https://github.com/nlohmann/json.git

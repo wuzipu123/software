@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP STM32L476RGT6
+D ARM MCU 32-bit 80MHz 1024KB  LQFP64 STMicroelectronics STM32L476RGT6, 32bit ARM Cortex M4 MCU, 80MHz, 1 MB Flash, 64-Pin LQFP
+F https://componentsearchengine.com/Datasheets/1/STM32L476RGT6.pdf
+$ENDCMP
+#
+#End Doc Library

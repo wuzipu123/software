@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name TPS62050DGS)(type Legacy)(uri ${KIPRJMOD}/lib/TPS62050DGS.lib)(options "")(descr ""))
+  (lib (name TPS62051DGS)(type Legacy)(uri ${KIPRJMOD}/lib/TPS62051DGS.lib)(options "")(descr ""))
+  (lib (name TPS62056DGS)(type Legacy)(uri ${KIPRJMOD}/lib/TPS62056DGS.lib)(options "")(descr ""))
+)

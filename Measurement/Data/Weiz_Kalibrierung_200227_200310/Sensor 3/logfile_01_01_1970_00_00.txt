@@ -1,0 +1,8 @@
+Init OK 
+01.01.1970 00:00 : Sensor slot 0, no response 
+01.01.1970 00:00 : Sensor slot 1, no response 
+01.01.1970 00:00 : Sensor slot 2, no response 
+01.01.1970 00:00 : Sensor slot 3, no response 
+01.01.1970 00:00 : Started measurement 
+01.01.1970 00:00 : Software System Reset. 
+ End of this logfile. 

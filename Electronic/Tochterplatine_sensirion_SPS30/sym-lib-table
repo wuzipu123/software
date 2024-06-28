@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name Samtec)(type Legacy)(uri ${KIPRJMOD}/samtec_pci.pretty)(options "")(descr ""))
+  (lib (name samtec_pci)(type Legacy)(uri C:/Users/tolotos/Documents/SensMat/Electronic/Tochterplatine_sensirion_SPS30/samtec_pci.lib)(options "")(descr ""))
+  (lib (name esd_protection)(type Legacy)(uri C:/Users/tolotos/Documents/SensMat/Electronic/Tochterplatine_sensirion_SPS30/esd_protection.lib)(options "")(descr ""))
+  (lib (name Tochterplatine_sensirion_SPS30-rescue)(type Legacy)(uri ${KIPRJMOD}/Tochterplatine_sensirion_SPS30-rescue.lib)(options "")(descr ""))
+)

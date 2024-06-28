@@ -1,0 +1,8 @@
+.idea
+.vscode
+doc/html
+doc/latex
+GettingStarted.html
+UNITTESTS/build
+BUILD
+CMakeLists.txt

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name Mutterplatine-rescue)(type Legacy)(uri ${KIPRJMOD}/Mutterplatine-rescue.lib)(options "")(descr ""))
+  (lib (name samtec_pci)(type Legacy)(uri ${KIPRJMOD}/Components/samtec_pci.lib)(options "")(descr ""))
+)

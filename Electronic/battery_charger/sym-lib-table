@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name components)(type Legacy)(uri "C:/Users/tolotos/Nextcloud/KiCad/Projects/Battery Charger/battery_charger/Components/components.lib")(options "")(descr ""))
+  (lib (name battery_charger-rescue)(type Legacy)(uri ${KIPRJMOD}/battery_charger-rescue.lib)(options "")(descr ""))
+)

@@ -1,0 +1,100 @@
+{
+    "macros": ["PRINT_STATS"],
+    "config": {
+        "sdcard_spi_frequency": {
+            "help": "The SPI frequency for the SD card",
+            "value": 5000000
+        },
+        "red_led": {
+            "help": "Pin number of the red LED",
+            "value": "PA_10"
+        },
+        "green_led": {
+            "help": "Pin number of the green LED",
+            "value": "PC_6"
+        },
+        "start_stop_button": {
+            "help": "Pin number of the start/stop button",
+            "value": "PB_15"
+        },
+        "reset_format_sd_button": {
+            "help": "Pin number of the reset/format SD button",
+            "value": "PC_13"
+        },
+        "sensor_serial_tx": {
+            "help": "Pin number for the TX line of the sensor board bus",
+            "value": "PC_4"
+        },
+        "sensor_serial_rx": {
+            "help": "Pin number for the RX line of the sensor board bus",
+            "value": "PC_5"
+        },
+        "sensor_rs485_de_nre": {
+            "help": "Pin number for the DE and !RE line of the MAX485 IC",
+            "value": "PB_0"
+        },
+        "sensor_serial_baud": {
+            "help": "Baud rate ot the sensor board bus",
+            "value": 115200
+        },
+        "sensor_serial_rx_timeout": {
+            "help": "Maximum receive timeout to wait for a packet from a sensor board in milliseconds",
+            "value": 200
+        },
+        "sensor_board_io_mapping": {
+            "help": "Define pin mapping for every sensor board. The format is {{<slave address (int)>, <supply enable pin name>, <error pin name>, <data ready pin name}, {...}} ",
+            "value": "{{0, PB_14, PA_1, PC_3},{0, PB_14, PA_1, PC_3},{0, PB_14, PA_1, PC_3},{3, PB_14, PA_1, PC_3},{4, PB_13, PA_6, PA_8},{5, PB_12, PC_2, PA_0}}"
+        }
+    },
+    "target_overrides": {
+        "BOX_CTRL_V2": {
+            "platform.default-serial-baud-rate": 115200,
+            "platform.stdio-baud-rate": 115200,
+            "platform.stdio-convert-newlines": 1,
+            "platform.crash-capture-enabled": true,
+            "platform.error-filename-capture-enabled": true,
+            "platform.error-hist-enabled": true,
+            "platform.memory-tracing-enabled": true,
+            "platform.stack-stats-enabled": true,
+            "platform.heap-stats-enabled": true,
+            "platform.cpu-stats-enabled": true,
+            "target.restrict_size": "0xFF000",
+            "target.components_add": ["SD"],
+            "rtos.main-thread-stack-size": 16384,
+            "rtos.idle-thread-stack-size-tickless-extra": 512,
+            "drivers.uart-serial-rxbuf-size": 1500,
+            "drivers.uart-serial-txbuf-size": 1024,
+            "sd.SPI_MOSI" : "PC_12",
+            "sd.SPI_MISO" : "PC_11",
+            "sd.SPI_CLK"  : "PC_10",
+            "sd.SPI_CS"   : "PC_8",
+            "target.clock_source": "USE_PLL_HSE_XTAL",
+            "target.lse_available": 1,
+            "red_led": "PA_10",
+            "green_led": "PC_0",
+            "reset_format_sd_button": "PC_1"
+        },
+        "BOX_CTRL_V3": {
+            "platform.default-serial-baud-rate": 115200,
+            "platform.stdio-baud-rate": 115200,
+            "platform.stdio-convert-newlines": 1,
+            "platform.crash-capture-enabled": true,
+            "platform.error-filename-capture-enabled": true,
+            "platform.error-hist-enabled": true,
+            "platform.memory-tracing-enabled": true,
+            "platform.stack-stats-enabled": true,
+            "platform.heap-stats-enabled": true,
+            "platform.cpu-stats-enabled": true,
+            "target.restrict_size": "0xFF000",
+            "target.components_add": ["SD"],
+            "rtos.main-thread-stack-size": 16384,
+            "rtos.idle-thread-stack-size-tickless-extra": 512,
+            "drivers.uart-serial-rxbuf-size": 1500,
+            "drivers.uart-serial-txbuf-size": 1024,
+            "sd.SPI_MOSI" : "PC_12",
+            "sd.SPI_MISO" : "PC_11",
+            "sd.SPI_CLK"  : "PC_10",
+            "sd.SPI_CS"   : "PC_8"
+        }
+    }
+}
